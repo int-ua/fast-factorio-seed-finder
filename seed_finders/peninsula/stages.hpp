@@ -13,7 +13,7 @@ constexpr Finder<SeedCache>::StageSettings stage3_settings{
     .check_water_settings = false,
     .check_elevation_types = false,
 
-    .seed_nb_to_next_stage = 100    // For this stage I will use the top n option. Only the top 1000 seeds will make it to the output file.
+    .seed_nb_to_next_stage = 100    // Only the top 100 seeds will make it to the output file.
 };
 
 Finder<SeedCache>::EvalResult stage3_eval(const MapGenSettings&, const NoisePrecompute&, NoiseCache&, uint32_t seed, SeedCache*);
