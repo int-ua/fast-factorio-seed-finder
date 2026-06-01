@@ -59,7 +59,7 @@ Finder<SeedCache>::EvalResult stage3_eval(
                 // does square contain water?
 
                 pos.x = (swap_coords ? x : y) * (negative_x ? -1 : 1) * radius * 2;
-                pos.y = (swap_coords ? y : x) * (negative_y ? -1 : 0) * radius * 2;
+                pos.y = (swap_coords ? y : x) * (negative_y ? -1 : 1) * radius * 2;
                 // std::cout << "(" << x << ", " << y << ") >" << "(" << pos.x << ", " << pos.y << ")" << std::endl;
 
                 if (noise.any_water_in_box(settings, precompute, BoxI32(pos, radius), sampling_distance)) {
